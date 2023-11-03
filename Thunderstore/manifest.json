@@ -1,7 +1,7 @@
 {
     "name": "StyleOnBack",
     "version_number": "1.0.0",
-    "website_url": "",
+    "website_url": "https://github.com/yurilewd/StyleOnBack",
     "description": "Shows your current movestyle on your back when not in use.",
     "dependencies": ["BepInEx-BepInExPack-5.4.2100"]
 }
