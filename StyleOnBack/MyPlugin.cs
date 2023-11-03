@@ -26,9 +26,6 @@ namespace StyleOnBack
 
         public static ConfigEntry<bool> placementMode;
 
-
-
-
         //Inline Config
         public static ConfigEntry<string> skateBoneName;
 
@@ -45,7 +42,6 @@ namespace StyleOnBack
         public static ConfigEntry<float> skateRScale;
         //
 
-
         //Skateboard Config
         public static ConfigEntry<string> skateboardBoneName;
 
@@ -57,7 +53,6 @@ namespace StyleOnBack
         public static ConfigEntry<Vector3> skateboardRot;
         public static ConfigEntry<float> skateboardScale;
         //
-
 
         //BMX Config
         public static ConfigEntry<string> bmxBoneName;
@@ -95,17 +90,12 @@ namespace StyleOnBack
         public static ConfigEntry<float> bmxPedRScale;
         //
 
-
-
-
         private void Awake()
         {
             harmony = new Harmony(MyGUID);
             harmony.PatchAll(typeof(PlayerPatch));
             harmony.PatchAll(typeof(CharacterVisualPatch));
             harmony.PatchAll(typeof(BoostAbilityPatch));
-
-            
 
 
             placementMode = Config.Bind("000", "Enable Placement Mode", false, new ConfigDescription("", null, new ConfigurationManagerAttributes { IsAdvanced = false }));
@@ -209,7 +199,6 @@ namespace StyleOnBack
                     default:
                         break;
                 }
-                
             }
         }
     }

@@ -17,10 +17,6 @@ namespace StyleOnBack.Patches
         public static bool bmxDoOnce = false;
 
 
-
-        
-
-
         [HarmonyPatch(typeof(CharacterVisual), nameof(CharacterVisual.SetInlineSkatesPropsMode))]
         [HarmonyPrefix]
         private static bool CharacterVisual_SetInlineSkatesPropsMode_Prefix(CharacterVisual.MoveStylePropMode mode, CharacterVisual __instance)
@@ -60,7 +56,6 @@ namespace StyleOnBack.Patches
                 __instance.moveStyleProps.skateL.SetActive(true);
                 __instance.moveStyleProps.skateR.SetActive(true);
 
-
                 //Inline Left
                 __instance.moveStyleProps.skateL.transform.parent = inlineParent.transform;
                 __instance.moveStyleProps.skateL.transform.SetToIdentity();
@@ -95,6 +90,7 @@ namespace StyleOnBack.Patches
             }
 
             __instance.moveStyleProps.skateboard.SetActive(mode == CharacterVisual.MoveStylePropMode.ACTIVE);
+
             if (mode == CharacterVisual.MoveStylePropMode.ACTIVE)
             {
 
@@ -149,6 +145,7 @@ namespace StyleOnBack.Patches
             __instance.moveStyleProps.bmxGear.SetActive(mode == CharacterVisual.MoveStylePropMode.ACTIVE);
             __instance.moveStyleProps.bmxPedalL.SetActive(mode == CharacterVisual.MoveStylePropMode.ACTIVE);
             __instance.moveStyleProps.bmxPedalR.SetActive(mode == CharacterVisual.MoveStylePropMode.ACTIVE);
+
             if (mode == CharacterVisual.MoveStylePropMode.ACTIVE)
             {
 
